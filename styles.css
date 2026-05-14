@@ -397,6 +397,15 @@ section {
   position: relative;
   overflow: hidden;
   object-fit: cover;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.about-avatar:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
 }
 
 .about-avatar::before {

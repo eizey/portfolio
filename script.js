@@ -1,3 +1,18 @@
+// Image hover swap
+const avatar = document.querySelector(".about-avatar");
+if (avatar) {
+  const originalSrc = avatar.src;
+  const hoverSrc = avatar.dataset.hover;
+
+  avatar.addEventListener("mouseenter", () => {
+    avatar.src = hoverSrc;
+  });
+
+  avatar.addEventListener("mouseleave", () => {
+    avatar.src = originalSrc;
+  });
+}
+
 // Scroll reveal
 const reveals = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver(
